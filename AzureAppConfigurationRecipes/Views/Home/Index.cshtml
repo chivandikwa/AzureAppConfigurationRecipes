@@ -1,0 +1,12 @@
+﻿@using Microsoft.Extensions.Configuration
+@using Microsoft.Extensions.Options
+@{
+    ViewData["Title"] = "Home Page";
+}
+@inject IConfiguration Configuration
+@inject IOptionsSnapshot<ConfigurationSettings> OptionsSnapshot
+
+<div class="text-center">
+    <h1>@Configuration["Test:Settings:Label"]</h1>
+    @*<h1>@OptionsSnapshot.Value.Label</h1>*@
+</div>
